@@ -13,6 +13,9 @@ import org.springframework.context.annotation.Configuration;
 
 // 객체의 생성은 AppConfig에서 한다
 // 서비스단에서는 구체 클래스를 몰라도 된다
+
+// @Configuration은 cglib 기술을 사용
+// @Configuration 없이 @Bean만 사용할 경우 싱글톤이 깨진다. 그리고 해당 빈은 스프링 컨테이너가 관리하지 않는 것이고 그냥 new 로 생성한 객체와 동일하다
 @Configuration
 public class AppConfig {
 
