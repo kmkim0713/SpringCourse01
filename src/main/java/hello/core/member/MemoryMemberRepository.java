@@ -9,7 +9,6 @@ import java.util.Map;
 @Component
 public class MemoryMemberRepository implements MemberRepository{
 
-    @Autowired
     private static Map<Long, Member> store = new HashMap<>();
 
     @Override
